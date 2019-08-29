@@ -1,0 +1,5 @@
+loadRestrt glx-co_1.inpcrd
+setOverwrite True
+add12_6_4 @%Co2+,Na+ watermodel TIP3P 
+outparm glx-co_step1.prmtop glx-co_step1.inpcrd
+printLJMatrix @%Co2+,Na+

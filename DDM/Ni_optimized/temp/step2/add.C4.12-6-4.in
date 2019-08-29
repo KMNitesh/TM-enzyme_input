@@ -1,0 +1,5 @@
+loadRestrt glx-ni_2.inpcrd
+setOverwrite True
+add12_6_4 @%Ni2+,Na+ watermodel TIP3P polfile imz.dat
+outparm glx-ni_step2.prmtop glx-ni_step2.inpcrd
+printLJMatrix @%Ni2+,Na+

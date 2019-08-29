@@ -1,0 +1,11 @@
+source leaprc.protein.ff14SB
+source leaprc.gaff2
+source leaprc.water.tip3p
+loadamberparams frcmod.ions1lm_1264_tip3p
+loadamberparams frcmod.ions234lm_1264_tip3p
+a = loadpdb us_center_300.pdb
+solvateoct a TIP3PBOX 8.0
+addions2 a Na+ 10
+savepdb a glx-ni_1.pdb
+saveamberparm a glx-ni_1.prmtop glx-ni_1.inpcrd
+quit

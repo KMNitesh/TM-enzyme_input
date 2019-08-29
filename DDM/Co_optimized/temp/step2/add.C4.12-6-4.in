@@ -1,0 +1,5 @@
+loadRestrt glx-co_2.inpcrd
+setOverwrite True
+add12_6_4 @%Co2+,Na+ watermodel TIP3P polfile imz.dat
+outparm glx-co_step2.prmtop glx-co_step2.inpcrd
+printLJMatrix @%Co2+,Na+
