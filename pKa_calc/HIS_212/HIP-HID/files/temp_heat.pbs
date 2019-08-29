@@ -1,0 +1,28 @@
+#!/bin/bash
+##SBATCH --mail-user=songlin3@msu.edu
+##SBATCH --mail-type=FAIL
+#SBATCH -J 1hMMM_XXX
+#SBATCH -e test.err
+#SBATCH -o test.out
+#SBATCH -N 1 -c 1 --gres=gpu:1
+#SBATCH --mem=8G
+#SBATCH --time=2:00:00
+
+echo $SLURM_SUBMIT_DIR
+cd $SLURM_SUBMIT_DIR
+
+#-------------- Load Modules ------------------
+module purge
+ulimit -c 0
+module load GNU/6.4.0-2.28  OpenMPI/2.1.2-CUDA
+module load Amber/18
+
+exe=$AMBERHOME/bin/pmemd.cuda
+#-------------- Run job -----------------------
+$exe  -O -i XXX_heat.in -p glx-co_step1_f.prmtop -o XXX_heat.out -c 0.5_min.rst -r XXX_heat.rst -x XXX_heat.netcdf -inf XXX_heat.mdinfo -ref 0.5_min.rst
+if grep "Total wall time" XXX_heat.out;then
+   sbatch XXX_equi.pbs
+else
+   sbatch XXX_heat.pbs
+fi
+echo 'FINISH JOB, SAVE IT TO SCRATCH'
