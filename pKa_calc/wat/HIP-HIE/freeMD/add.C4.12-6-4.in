@@ -1,0 +1,6 @@
+parm hip-hie_ii.prmtop
+loadRestrt hip-hie_ii.inpcrd
+setOverwrite True
+add12_6_4 @%Na+,Cl- watermodel TIP3P 
+outparm hip-hie.prmtop hip-hie.inpcrd
+printLJMatrix @%Na+,Cl-

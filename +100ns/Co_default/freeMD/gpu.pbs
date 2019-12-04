@@ -1,0 +1,26 @@
+#!/bin/bash
+#SBATCH -J Co_default
+#SBATCH -e test.err
+#SBATCH --nodes=1             ### Node count required for the job
+#SBATCH --ntasks-per-node=1   ### Nuber of tasks to be launched per Node     
+#SBATCH --gres=gpu:v100:1          ### General REServation of gpu:number of gpus
+#SBATCH --mem=8G
+#SBATCH --time=15:00:00
+  
+echo $SLURM_SUBMIT_DIR
+cd $SLURM_SUBMIT_DIR
+
+#-------------- Load Modules ------------------
+ml -* GCC/7.3.0-2.30 OpenMPI/3.1.1-CUDA Amber/18-AmberTools-19
+
+exe=$AMBERHOME/bin/pmemd.cuda
+
+#-------------- Run job -----------------------
+echo 'RUN AMBER JOB'
+# running command
+$exe -O -i us_2.in -o us_2.out -c us.rst -p glx-co_1264_final.prmtop -r us_2.rst -x us_2.netcdf -inf us_2.mdinfo
+cpptraj glx-co_1264_final.prmtop < ptraj.in > out
+cpptraj glx-co_1264_final.prmtop < center.in > out
+cpptraj glx-co_1264_final.prmtop < bond.in > out
+cpptraj glx-co_1264_final.prmtop < angle.in > out
+cpptraj glx-co_1264_final.prmtop < dihedral.in > out

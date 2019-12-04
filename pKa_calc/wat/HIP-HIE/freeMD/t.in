@@ -1,0 +1,8 @@
+source leaprc.protein.ff14SB
+source leaprc.gaff2
+source leaprc.water.tip3p
+loadamberparams frcmod.ions1lm_1264_tip3p
+loadamberparams frcmod.ions234lm_1264_tip3p
+a = loadpdb work_fa6_noCo_noh_HIPHID.pdb
+savepdb a HIPHID.pdb
+quit

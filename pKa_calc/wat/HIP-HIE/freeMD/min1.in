@@ -1,0 +1,9 @@
+minimize structure solvation
+ &cntrl
+  imin=1,ntmin=2,maxcyc=10000, ncyc=20000,
+  ntb=1, cut=10, ntwx=2000, ioutfm=1, iwrap=1, 
+  ntr=1, restraintmask=':1-4', restraint_wt=200,
+  icfe=1,clambda=0,timask1 = ":2",timask2 = ":4",scmask1=":2",scmask2=":4",ifsc=1,
+ /
+ &ewald
+ /

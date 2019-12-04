@@ -1,0 +1,5 @@
+loadRestrt glx-ni_1264.inpcrd
+setOverwrite True
+changeLJSingleType :276 1.431  0.02133669
+outparm glx-ni_1264_final.prmtop glx-ni_1264_final.inpcrd
+printLJMatrix @%Ni2+,M0,Na+

@@ -1,0 +1,12 @@
+minimize structure the whole structure
+ &cntrl
+  imin=1,maxcyc=10000, ncyc=20000,
+  ntb=1, cut=10, ntwx=2000, ioutfm=1, iwrap=1,
+  lj1264=1,nmropt=1,
+ /
+ &ewald
+ /
+&wt TYPE="DUMPFREQ", istep1=1000, /
+ &wt TYPE="END", /
+DISANG=equi_dis.RST
+DUMPAVE=min5.log

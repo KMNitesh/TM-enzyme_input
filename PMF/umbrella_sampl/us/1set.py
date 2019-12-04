@@ -3,13 +3,11 @@ import os
 dir = os.path.dirname(os.path.realpath(__file__)) + '/'
 
 smd_filesdir = dir + 'smd_files/'
-disfile = smd_filesdir + 'Ni-Nimz_dis.txt' # remember to rename for diff metal lig 
-prm = 'imz_def.prmtop'
-#os.system("sed -i 's/cd316cm5/imz2.50'/g files/*.pbs")
+disfile = smd_filesdir + 'Ni-AceC_dis.txt' # remember to rename for diff metal lig 
+prm = 'nicoo1264_0.145.prmtop'
 
-for a in range(0,59):          #remember to change this
-#for a in range(0,3):
-  a = round(float(2.16 + a*0.05),2)
+for a in range(0,39):          #remember to change this
+  a = round(float(3.14 + a*0.05),2)
   os.system("rm -r %s"%(a))              #removing the folder if present previously
   os.system("cp -r files %s"%(a))          #making the folder
   os.chdir(smd_filesdir) 
@@ -31,6 +29,4 @@ for a in range(0,59):          #remember to change this
   os.system("sed -i 's/XXX/%s/g' dis.RST" %(a))
   os.system("sed -i 's/XXX/%s/g' *.pbs" %(a))
   os.system("sed -i 's/NNN/%s/g' *.pbs" %(num))
-  os.system("sbatch mh.pbs")
   os.chdir(dir)
-

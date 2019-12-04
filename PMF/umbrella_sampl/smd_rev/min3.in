@@ -1,0 +1,13 @@
+minimize structure solvation+hydrogen+sidechain
+ &cntrl
+  imin=1,maxcyc=10000, ncyc=20000,
+  ntb=1, cut=10, ntwx=2000, ioutfm=1, iwrap=1, 
+  ntr=1, restraintmask=':1-4@C,O,CA,N', restraint_wt=200,
+  lj1264=1,nmropt=1,
+ /
+ &ewald
+ /
+&wt TYPE="DUMPFREQ", istep1=1000, /
+ &wt TYPE="END", /
+DISANG=equi_dis.RST
+DUMPAVE=min3.log

@@ -1,0 +1,6 @@
+parm glx-co_1264.prmtop
+loadRestrt glx-co_1264.inpcrd
+setOverwrite True
+add12_6_4 @%Na+ watermodel TIP3P 
+outparm glx-co_1264_final.prmtop glx-co_1264_final.inpcrd
+printLJMatrix @%Na+

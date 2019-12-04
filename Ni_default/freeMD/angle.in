@@ -1,0 +1,2 @@
+trajin us_center.netcdf
+angle Ni-C-C_angle :275@NI :7@C :8@C out angle.txt

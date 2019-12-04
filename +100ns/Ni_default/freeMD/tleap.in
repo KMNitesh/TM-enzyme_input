@@ -1,0 +1,12 @@
+source leaprc.protein.ff14SB
+source leaprc.gaff2
+source leaprc.water.tip3p
+loadOff M0.lib
+loadamberparams frcmod.ions1lm_1264_tip3p
+loadamberparams frcmod.ions234lm_1264_tip3p
+loadamberparams M0_vdw.frcmod
+a = loadpdb work_f9z_sort_noh.pdb
+solvateoct a TIP3PBOX 10.0
+addions2 a Na+ 9
+saveamberparm a glx_126.prmtop glx_126.inpcrd
+quit

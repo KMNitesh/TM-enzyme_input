@@ -1,0 +1,14 @@
+trajin 0.00922_us_center.netcdf
+trajin 0.04794_us_center.netcdf
+trajin 0.11505_us_center.netcdf
+trajin 0.20634_us_center.netcdf
+trajin 0.31608_us_center.netcdf
+trajin 0.43738_us_center.netcdf
+trajin 0.56262_us_center.netcdf
+trajin 0.68392_us_center.netcdf
+trajin 0.79366_us_center.netcdf
+trajin 0.88495_us_center.netcdf
+trajin 0.95206_us_center.netcdf
+trajin 0.99078_us_center.netcdf
+autoimage
+trajout MMM_all_us_center.netcdf netcdf

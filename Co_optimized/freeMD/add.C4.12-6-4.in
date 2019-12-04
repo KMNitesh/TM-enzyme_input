@@ -1,0 +1,5 @@
+loadRestrt glx_126.inpcrd
+setOverwrite True
+add12_6_4 @%Co2+,M0,Na+ c4file c4_CO2+.txt polfile 2.23NA-0.12O.dat
+outparm glx-co_1264.prmtop glx-co_1264.inpcrd
+printLJMatrix @%Co2+,M0,Na+

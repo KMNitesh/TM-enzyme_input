@@ -1,0 +1,3 @@
+trajin us_2.netcdf 1353 1353
+autoimage
+trajout us_center_4982.pdb pdb

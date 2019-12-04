@@ -1,0 +1,3 @@
+trajin XXX_us.netcdf 1 last 2
+autoimage
+trajout XXX_us_center.netcdf netcdf

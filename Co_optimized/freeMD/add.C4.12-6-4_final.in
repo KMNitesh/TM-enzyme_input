@@ -1,0 +1,5 @@
+loadRestrt glx-co_1264.inpcrd
+setOverwrite True
+changeLJSingleType :276 1.458  0.02735051
+outparm glx-co_1264_final.prmtop glx-co_1264_final.inpcrd
+printLJMatrix @%Co2+,M0,Na+

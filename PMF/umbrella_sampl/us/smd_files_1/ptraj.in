@@ -1,0 +1,2 @@
+trajin prod_center.netcdf NNN NNN
+trajout prod_center_1_NNN.rst restart

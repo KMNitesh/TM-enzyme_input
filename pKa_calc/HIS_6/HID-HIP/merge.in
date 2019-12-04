@@ -1,6 +1,0 @@
-loadRestrt glx-co_1.inpcrd
-setOverwrite True
-tiMerge :1-274 :275-548 :6 :280
-outparm glx-co_step1.prmtop glx-co_step1.inpcrd
-outpdb glx-co_step1.pdb
-quit

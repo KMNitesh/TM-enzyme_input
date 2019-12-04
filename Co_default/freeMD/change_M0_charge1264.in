@@ -1,0 +1,8 @@
+parm glx-co_1264_final.prmtop
+setOverwrite True
+add12_6_4 @%Co2+,M0,Na+ c4file c4_0.txt 
+change CHARGE :276 0
+changeLJSingleType :276@M0 0 0
+netcharge :276
+printLJMatrix :275-276
+outparm glx-co_1264_final_vdw.prmtop

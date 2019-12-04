@@ -1,0 +1,2 @@
+trajin us_center.netcdf
+dihedral Co-C-C-C_dihedral :275@CO :7@C :8@C :212@C out dihedral.txt

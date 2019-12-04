@@ -1,0 +1,2 @@
+trajin us_center.netcdf
+distance Ni-C_dis :275@NI :7@C out bond.txt

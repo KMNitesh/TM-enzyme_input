@@ -1,0 +1,3 @@
+parm glx-co_1264_final_vdw.prmtop
+netcharge :276
+printLJMatrix :275-276

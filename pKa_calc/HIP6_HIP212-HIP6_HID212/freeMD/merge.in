@@ -1,0 +1,7 @@
+parm glx-co_126.prmtop
+loadRestrt glx-co_126.inpcrd
+setOverwrite True
+tiMerge :1-274 :275-548 :212 :486
+outparm glx-co_1264.prmtop glx-co_1264.inpcrd
+outpdb glx-co_1264.pdb
+quit
